@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+  <div style="margin: 20px;">
+    <label for="celsius">Celsius: </label>
+    <input type="number" id="celsius" [(ngModel)]="celsius" (input)="convertToFahrenheit()" placeholder="Enter °C">
+    <p *ngIf="fahrenheit !== null">Fahrenheit: {{ fahrenheit }} °F</p>
+  </div>
+
+  <div style="margin: 20px;">
+    <label for="fahrenheit">Fahrenheit: </label>
+    <input type="number" id="fahrenheit" [(ngModel)]="fahrenheitInput" (input)="convertToCelsius()" placeholder="Enter °F">
+    <p *ngIf="celsiusResult !== null">Celsius: {{ celsiusResult }} °C</p>
+  </div>
+</div>
